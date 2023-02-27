@@ -5,9 +5,9 @@ FROM pytorch/$IMG_REPO:$IMG_TAG
 
 RUN apt-get -y update && apt-get -y install git gcc llvm-9-dev cmake libaio-dev vim wget
 
-RUN git clone https://github.com/aihubgit/2-099.git
+RUN git clone https://github.com/smartcoop-git/2-099.git
 
-RUN pip install git+https://github.com/aihubgit/2-099.git
+RUN pip install git+https://github.com/smartcoop-git/2-099.git
 
 RUN pip install pytorch-fid
 
