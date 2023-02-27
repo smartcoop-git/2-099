@@ -51,4 +51,4 @@ VQ-VAE 구조
 - 원본 이미지의 픽셀값과 재구성 및 출력 이미지의 FID(프레쳇 인셉션 거리)의 평균값은 __'0.00'__ 입니다.
 
 ## Github 링크
-- [Github-aihubgit](https://github.com/aihubgit/2-099)
+- [Github-smartcoop-git](https://github.com/smartcoop-git/2-099.git)
