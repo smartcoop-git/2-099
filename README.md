@@ -2,7 +2,7 @@
 
 GAN(DALLE)은 두개의 모델이 있습니다. 텍스트(언어) 이해를 위한 Transformer기반의 언어 모델과 고품질의 이미지를 생성할 수 있는 구축 모델로 이루어져 있습니다.
 
-사용한 언어모델은 텍스트 만으로 사전학습된 'xlm-roberta-base' 입니다. 
+사용한 언어모델은 텍스트 만으로 사전학습된 'bert-base-multilingual-cased' 입니다. 
 
 사용한 구축 모델은 'discrete VAE' 입니다.
 
@@ -22,7 +22,7 @@ VQ-VAE 구조
 
  
 ## input
- - 입력은 [0, 255] 범위의 값을 가진 16bit, 3채널 RGB 이미지, 최대 512길이의 텍스트 파일 입니다.
+ - 입력은 [0, 255] 범위의 값을 가진 16bit, 3채널 RGB 이미지, 최대 1000길이의 텍스트 파일 입니다.
  - 모양 : (B, H, W, 3), text
  
 ## output
@@ -43,8 +43,11 @@ VQ-VAE 구조
  - epoch(학습량) : 20
  - input_image_size(입력 이미지 크기) : 1024
  - output_image_size(출력 이미지 크기) : 256
- - batch_size(한번 학습에 입력되는 데이터 수) : 16
- - learning_rate(학습률) : 4.5e-4
+ - batch_size(한번 학습에 입력되는 데이터 수) : 8 (vae)
+ - batch_size(한번 학습에 입력되는 데이터 수) : 4 (dalle)
+ - learning_rate(학습률) : 1e-3 (vae)
+ - learning_rate(학습률) : 3e-4 (dalle)
+
  
 
 ## evaluation metric
